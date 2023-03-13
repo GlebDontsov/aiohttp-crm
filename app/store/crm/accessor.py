@@ -1,4 +1,5 @@
 import typing
+import uuid
 from typing import Optional
 
 from app.crm.models import User
@@ -25,3 +26,12 @@ class CrmAccessor:
 
     async def add_user(self, user: User):
         self.app.database["users"].append(user)
+
+    async def list_users(self) -> list():
+        return self.app.database["users"]
+
+    async def get_user(self, id_: uuid.UUID):
+        for user in self.app.database["users"]:
+            if user.id_ == id_:
+                return user
+        return None
