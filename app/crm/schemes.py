@@ -1,5 +1,5 @@
 from marshmallow import Schema, fields
-from app.web.shemes import OkResponseScheme
+from app.web.schemes import OkResponseScheme
 
 
 class UserAddSchema(Schema):

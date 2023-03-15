@@ -5,10 +5,10 @@ from aiohttp.web_exceptions import HTTPNotFound
 from aiohttp_apispec import docs, request_schema, response_schema, querystring_schema
 
 from app.crm.models import User
-from app.crm.schemes import UserSchema, ListUsersResponseSchema, UserGetResponseSchema, \
+from app.crm.schemes import ListUsersResponseSchema, UserGetResponseSchema, \
     UserGetRequestSchema, UserAddSchema
 from app.web.app import View
-from app.web.shemes import OkResponseScheme
+from app.web.schemes import OkResponseScheme
 
 
 class AddUserView(View):
